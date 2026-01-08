@@ -1,5 +1,5 @@
 /*Input:marks
-condition:
+condition:-
 
 1.marks>=90
   Grade A
@@ -15,9 +15,13 @@ condition:
 void main()
 {
     int marks;
+
+    //input hub
     printf("Enter the marks of the student :");
     scanf("%d",&marks);
-
+    
+    //testing hub
+    //if else ladder
     if(marks>=90)
     {
         printf("Grade A\n");
@@ -39,3 +43,4 @@ void main()
         printf("Grade F\n");
     }
 }
+
