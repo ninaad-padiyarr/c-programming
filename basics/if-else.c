@@ -16,7 +16,7 @@ void main()
 {
     int marks;
 
-    //input hub
+    //input hub.
     printf("Enter the marks of the student :");
     scanf("%d",&marks);
     
