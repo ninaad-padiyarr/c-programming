@@ -1,18 +1,41 @@
-#include <stdio.h>
+/*Input:marks
+condition:
 
-int main() {
-    int number;
-    
-    printf("Enter a number: ");
-    scanf("%d", &number);
-    
-    if (number > 0) {
-        printf("%d is positive\n", number);
-    } else if (number < 0) {
-        printf("%d is negative\n", number);
-    } else {
-        printf("The number is zero\n");//ee
+1.marks>=90
+  Grade A
+2. 75-89
+  Grade B
+3.60-74
+  Grade C
+4.50-59
+  Grade D
+5.<50
+  Grade F */
+#include<stdio.h>
+void main()
+{
+    int marks;
+    printf("Enter the marks of the student :");
+    scanf("%d",&marks);
+
+    if(marks>=90)
+    {
+        printf("Grade A\n");
     }
-    
-    return 0;
+    else if(marks>=75 && marks<=89)
+    {
+        printf("Grade B\n");
+    }
+    else if(marks>=60 && marks<=74)
+    {
+        printf("Grade C\n");
+    }
+    else if(marks>=50 && marks<=59)
+    {
+        printf("Grade D\n");
+    }
+    else
+    {
+        printf("Grade F\n");
+    }
 }
