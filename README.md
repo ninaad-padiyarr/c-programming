@@ -58,8 +58,8 @@
 
     <h3>Compilation</h3>
     <p>To compile any program:</p>
-    <pre><code>gcc filename.c -o output
-./output</code></pre>
+    <pre>gcc filename.c -o output
+./output</pre>
 
     <h2>📖 Learning Resources</h2>
     <ul>
