@@ -1,30 +1,40 @@
 /*develope a c programee takes input for three subjects as input.use a function to ckeck if the student has passed minimum of 
-40 marks in each subject display the average and weather the student has passed or failed.*/
+40 marks in each subject display the average and weather the student has passed or failed use functions.*/
 #include <stdio.h>
 
-int main() {
-    int subject1, subject2, subject3;
-    float average;
+// Function to check pass or fail
+int checkPass(int m1, int m2, int m3)
+{
+    if (m1 >= 40 && m2 >= 40 && m3 >= 40)
+        return 1;   // Passed
+    else
+        return 0;   // Failed
+}
+
+// Function to calculate average
+float calculateAverage(int m1, int m2, int m3)
+{
+    return (m1 + m2 + m3) / 3.0;
+}
+
+int main()
+{
+    int sub1, sub2, sub3;
+    float avg;
+    int result;
 
     printf("Enter marks for three subjects: ");
-    scanf("%d %d %d", &subject1, &subject2, &subject3);
+    scanf("%d %d %d", &sub1, &sub2, &sub3);
 
-    average = (subject1 + subject2 + subject3) / 3.0;
+    avg = calculateAverage(sub1, sub2, sub3);
+    result = checkPass(sub1, sub2, sub3);
 
-    if (subject1 >= 40 && subject2 >= 40 && subject3 >= 40) {
-        printf("Average: %.2f\n", average);
-        printf("Student has passed.\n");
-    } else {
-        printf("Average: %.2f\n", average);
-        printf("Student has failed.\n");
-    }
+    printf("Average Marks = %.2f\n", avg);
 
-    return 0;
-}
-    } else {
-        printf("Average: %.2f\n", average);
-        printf("Student has failed.\n");
-    }
+    if (result == 1)
+        printf("Status: Passed\n");
+    else
+        printf("Status: Failed\n");
 
     return 0;
 }
