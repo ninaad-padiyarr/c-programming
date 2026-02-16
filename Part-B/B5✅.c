@@ -1,7 +1,4 @@
-/*A local library needs to store display details of its book including 
-title author and year od publication.design a structure that can hold these
- these deails and develop a c programe to displ;ay a list of all books entered*/
- #include <stdio.h>
+#include <stdio.h>
 
 struct Book
 {
@@ -15,32 +12,31 @@ int main()
     struct Book b[10];
     int n, i;
 
-    printf("How many books? ");
+    printf("Enter number of books: ");
     scanf("%d", &n);
+    getchar();   // clear newline from buffer
 
-    // Input book details
     for(i = 0; i < n; i++)
     {
-        printf("\nBook %d\n", i + 1);
+        printf("\nEnter details of book %d\n", i + 1);
 
         printf("Title: ");
-        scanf(" %[^\n]", b[i].title);
+        fgets(b[i].title, 50, stdin);
 
         printf("Author: ");
-        scanf(" %[^\n]", b[i].author);
+        fgets(b[i].author, 50, stdin);
 
         printf("Year: ");
         scanf("%d", &b[i].year);
+        getchar();   // clear newline
     }
 
-    // Display all books
-    printf("\n--- Book List ---\n");
+    printf("\nBook Details:\n");
 
     for(i = 0; i < n; i++)
     {
-        printf("\nBook %d\n", i + 1);
-        printf("Title: %s\n", b[i].title);
-        printf("Author: %s\n", b[i].author);
+        printf("\nTitle: %s", b[i].title);
+        printf("Author: %s", b[i].author);
         printf("Year: %d\n", b[i].year);
     }
 
