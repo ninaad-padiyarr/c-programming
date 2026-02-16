@@ -3,7 +3,7 @@
 int main()
 {
     int quantity;
-    float price, total = 0;
+    float price, total = 0,discount;
     char choice;
 
     do
@@ -25,7 +25,7 @@ int main()
 
     if(total > 2000)
     {
-        float discount = total * 0.10;
+          discount = total * 0.10;
         total = total - discount;
         printf("10%% Discount Applied!\n");
         printf("Final Bill after Discount = %.2f\n", total);

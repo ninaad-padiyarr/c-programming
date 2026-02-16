@@ -1,5 +1,4 @@
-/*A app needs to determine the type of roots for a quadratic equation based on users input.develope a 
-c programme to calculate and display the roots of the given co efficients use the conecept of nested for loop*/
+//
 #include <stdio.h>
 #include <math.h>
 
@@ -31,7 +30,7 @@ void main()
         // One real root
         root1 = root2 = -b / (2*a);
 
-        printf("Roots are real and the same.\n");
+        printf("Roots are real and equal.\n");
         printf("Root 1 = Root 2 = %.2f\n", root1);
     }
     else

@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<string.h>
+
+void main()
+{
+    char course[100];
+    char key[50];
+    
+    printf("Enter the course name");
+    fgets(course,sizeof(course),stdin);
+    
+    printf("Enter the keyword to be searched");
+    scanf("%s",key);
+    
+    if(strstr(course,key) != NULL)
+    {
+        printf("The keyword is found");
+    }
+    else
+    printf("The keyword is not found");
+}

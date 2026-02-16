@@ -3,7 +3,7 @@
 int main()
 {
     char first[30], last[30], full[60];
-    int i = 0, j = 0, length = 0;
+    int i = 0, j = 0;
 
     printf("Enter First Name: ");
     scanf("%s", first);
@@ -19,30 +19,21 @@ int main()
     }
 
     // Add space
-    full[i] = ' ';
-    i++;
+    full[i++] = ' ';
 
     // Copy last name
     while(last[j] != '\0')
     {
-        full[i] = last[j];
-        i++;
-        j++;
+        full[i++] = last[j++];
     }
 
-    // End the string
+    // End string
     full[i] = '\0';
 
-    // Find length
-    while(full[length] != '\0')
-    {
-        length++;
-    }
-
     printf("\nFull Name: %s", full);
-    printf("\nLength: %d", length);
+    printf("\nLength: %d", i);
 
-    if(length <= 20)
+    if(i <= 20)
         printf("\nFits on screen");
     else
         printf("\nDoes not fit on screen");
